@@ -1,2 +1,3 @@
-# Sparse-View-Cranial-CT-Reconstruction
-Code to the Paper....
+# Improvement of Hemorrhage Detection and
+Classifiction in Sparse-view Cranial Computed
+Tomography using Deep Learning
