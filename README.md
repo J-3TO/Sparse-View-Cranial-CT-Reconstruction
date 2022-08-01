@@ -1,2 +1,4 @@
-# Improvement of Hemorrhage Detection and Classifiction in Sparse-view Cranial Computed Tomography using Deep Learning
-Code to the paper: ...
+# Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning
+Code to the paper: "Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning" 
+
+#todo clean up code, upload code
