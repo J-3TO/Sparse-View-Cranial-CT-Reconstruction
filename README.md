@@ -1,7 +1,13 @@
 # Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning
 Code to the paper: "Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning" 
 
-#todo clean up code, upload code
+How to use this code:
+1) Download the stage_2_train folder from https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data
+2) Unzip and place in ./Data/
+3) Create dataset with the construct_dataset.ipynb
+4) Train U-Net with the train_U_Net.ipynb
+
+#todo upload code for training&evalutaion of classifier
 
 ### Dependencies: 
 
