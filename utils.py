@@ -12,7 +12,7 @@ class DataGen(tf.keras.utils.Sequence):
     Generator Function to load data for the training/testing of the classification network. 
     For the training/validation data, it is assumed that the data is saved as three neighbouring slices
     stacked to a three channel image.
-    For the test data 
+    For the test data, indiviudal images are loaded and concatenated with the neighbouring slices.
     
         
     Parameters
@@ -251,7 +251,7 @@ class DataGen(tf.keras.utils.Sequence):
     def __on_epoch_end(self):
         random.shuffle(self.slice_id_list)
         random.shuffle(self.filename_list)
-    
+
 def load_batch(file_list, source_dir, batchsize, shape=(256, 256), angle=128):
     """
     
@@ -289,7 +289,7 @@ def load_batch(file_list, source_dir, batchsize, shape=(256, 256), angle=128):
             
             gt_path = path + f'/4096/{filename}'.replace('dcm', 'npy')
             sparse_path = path + f'/{angle}/{filename}'.replace('dcm', 'npy')
-            
+            View
             data_clean = np.load(gt_path, mmap_mode='c') 
             data_sparse = np.load(sparse_path, mmap_mode='c')
             
