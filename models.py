@@ -3,13 +3,10 @@ import sys
 import numpy as np
 import random
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.layers import *
 from tensorflow.keras.models import *
-import matplotlib.pyplot as plt
-from tensorflow.python.keras import backend as K
-from tensorflow.python.framework import ops
+
 
 def U_Net():
     """

@@ -4,7 +4,8 @@ import numpy as np
 import random
 import tensorflow as tf
 from tensorflow import keras
-
+import scipy.ndimage as nd
+from tensorflow.python.keras import backend as K
 
 class DataGen(tf.keras.utils.Sequence):
 
@@ -289,7 +290,6 @@ def load_batch(file_list, source_dir, batchsize, shape=(256, 256), angle=128):
             
             gt_path = path + f'/4096/{filename}'.replace('dcm', 'npy')
             sparse_path = path + f'/{angle}/{filename}'.replace('dcm', 'npy')
-            View
             data_clean = np.load(gt_path, mmap_mode='c') 
             data_sparse = np.load(sparse_path, mmap_mode='c')
             
