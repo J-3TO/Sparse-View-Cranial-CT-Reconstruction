@@ -36,7 +36,7 @@ class DataGen(tf.keras.utils.Sequence):
         Sparse-view batch, gt batch
     """
         
-    def __init__(self, df = None, path = None, batch_size = None, augmentation = False, train = True, shape = (260, 250)):
+    def __init__(self, df = None, path = None, batch_size = None, augmentation = False, train = True, shape = (260, 260)):
         self.df_copy = df.copy()
         self.slice_id_list = self.df_copy['slice_id'].values
         self.filename_list = self.df_copy['filename'].values
@@ -65,7 +65,7 @@ class DataGen(tf.keras.utils.Sequence):
             return inpt_batch, label_batch, filename_list
     
     def load(self, path, filename):
-        array = np.load(path + filename.replace('.dcm', '.npy'))
+        array = np.load(path + filename.replace('.dcm', '.png.npy'))
         return array
 
     def _augmentation(self, img):
