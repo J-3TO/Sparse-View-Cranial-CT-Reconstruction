@@ -6,10 +6,11 @@ How to use this code:
 2) Unzip and place in ./Data/
 3) Create dataset with the construct_dataset.ipynb
 4) Train U-Net with the train_U_Net.ipynb
+5) Train EfficientNet with train_EfficientNet.ipynb
+6) Calculate ROC curves with eval.ipynb
 
-#todo upload code for training&evalutaion of classifier
 
-### Dependencies: 
+### Main Dependencies: 
 
 The code was used on following libraries:
 
