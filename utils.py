@@ -65,7 +65,7 @@ class DataGen(tf.keras.utils.Sequence):
             return inpt_batch, label_batch, filename_list
     
     def load(self, path, filename):
-        array = np.load(path + filename.replace('.dcm', '.npy'))
+        array = np.load(path + "/" + filename.replace('.dcm', '.npy'))
         return array
 
     def _augmentation(self, img):
