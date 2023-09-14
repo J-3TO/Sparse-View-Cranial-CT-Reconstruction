@@ -286,17 +286,14 @@ def load_batch(file_list, source_dir, batchsize, shape=(256, 256), angle=128):
         
         batch_clean = []
         batch_sparse = []
-        path = source_dir
         for j in range(batchsize):
             filename = random.choice(file_list)
             
-            gt_path = path + f'/4096/{filename}'.replace('dcm', 'npy')
-            sparse_path = path + f'/{angle}/{filename}'.replace('dcm', 'npy')
-            data_clean = np.load(gt_path, mmap_mode='c') 
-            data_sparse = np.load(sparse_path, mmap_mode='c')
+            gt_path = source_dir + f'/4096/{filename}'.replace('dcm', 'npy')
+            sparse_path = source_dir + f'/{angle}/{filename}'.replace('dcm', 'npy')
+            data_clean = np.load(gt_path, mmap_mode='c').astype("float32")
+            data_sparse = np.load(sparse_path, mmap_mode='c').astype("float32")
             
-            data_clean = (data_clean) / 4095
-            data_sparse = (data_sparse) / 4095
             try:
                 x = random.randrange(0, data_clean.shape[0] - shape[0])
                 y = random.randrange(0, data_clean.shape[1] - shape[1])
