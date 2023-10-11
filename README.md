@@ -8,6 +8,7 @@ How to use this code:
 4) Train U-Net with the train_U_Net.ipynb
 5) Train EfficientNet with train_EfficientNet.ipynb
 6) Calculate ROC curves with eval.ipynb
+7) Calculate SSIM/PSNR values with Calculate_SSIM_PSNR.ipynb
 
 
 ### Main Dependencies: 
