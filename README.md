@@ -1,5 +1,6 @@
 # Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning
-Code to the paper: "Improving Hemorrhage Detection in Sparse-view CTs via Deep Learning" 
+Code to the paper "Improving Automated Hemorrhage Detection in Sparse-view CT via U-Net-based Artifact Reduction"
+https://pubs.rsna.org/doi/10.1148/ryai.230275
 
 How to use this code:
 1) Download the stage_2_train folder from https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data
